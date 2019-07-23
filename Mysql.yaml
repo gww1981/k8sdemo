@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: Secret
+metadata: 
+  name : mysqlrootpassword
+  namespace: netcore
+type: Opaque
+data:
+  mysql_root_password: cGFzc3dvcmQ=
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  labels: 
+    name: mysql-service
+  namespace: netcore
+spec:
+  type: NodePort
+  selector:
+    app: mysql
+  ports:
+  - port: 3306
+    targetPort: 3306
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: netcore
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      imagePullSecrets: 
+      - name: myregistrykey 
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            valueFrom:
+               secretKeyRef:
+                 key: mysql_root_password
+                 name: mysqlrootpassword
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-storage
+          mountPath: /var/lib/mysql
+      volumes:
+       - name: mysql-storage
+         hostPath:
+           path: /var/lib/mysql  
+      
+      
+
+      

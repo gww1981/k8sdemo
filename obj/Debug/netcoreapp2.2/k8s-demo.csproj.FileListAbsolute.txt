@@ -1,0 +1,14 @@
+D:\Src\Repos\k8s-demo\bin\Debug\netcoreapp2.2\k8s-demo.deps.json
+D:\Src\Repos\k8s-demo\bin\Debug\netcoreapp2.2\k8s-demo.runtimeconfig.json
+D:\Src\Repos\k8s-demo\bin\Debug\netcoreapp2.2\k8s-demo.runtimeconfig.dev.json
+D:\Src\Repos\k8s-demo\bin\Debug\netcoreapp2.2\k8s-demo.dll
+D:\Src\Repos\k8s-demo\bin\Debug\netcoreapp2.2\k8s-demo.pdb
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.csprojAssemblyReference.cache
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.csproj.CoreCompileInputs.cache
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.RazorAssemblyInfo.cache
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.RazorAssemblyInfo.cs
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.AssemblyInfoInputs.cache
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.AssemblyInfo.cs
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.RazorTargetAssemblyInfo.cache
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.dll
+D:\Src\Repos\k8s-demo\obj\Debug\netcoreapp2.2\k8s-demo.pdb
