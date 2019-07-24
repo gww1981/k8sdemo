@@ -40,7 +40,7 @@ namespace k8s_demo.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
-            Console.WriteLine('test');
+            
         }
 
         // DELETE api/values/5
