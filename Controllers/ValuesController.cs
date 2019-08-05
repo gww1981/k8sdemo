@@ -27,6 +27,7 @@ namespace k8s_demo.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            System.Threading.Thread.Sleep(200);
             return id.ToString();
         }
 

@@ -12,23 +12,27 @@ spec:
     metadata:
       labels:
         app: k8s-demo
-    spec:
+    spec:  
       imagePullSecrets: 
-      - name: myregistrykey 
+      - name: aliyun-secret 
       containers:
       - name: k8s-demo
-        image: registry.cn-hangzhou.aliyuncs.com/gww/k8s-demo:1.5
+        image: registry.cn-hangzhou.aliyuncs.com/gww/k8s-demo:1.0.1
+        imagePullPolicy: IfNotPresent   
         resources:
+          requests:
+            memory: 128Mi
+            cpu: 200m        
           limits:
-            memory: "256Mi"
-            cpu: "250m"
+            memory: 1024Mi
+            cpu: 1
         ports:
         - containerPort: 80
-        livenessProbe:
-          httpGet:
-            path: /api/values/heath
-            port: 32090
-          initialDelaySeconds: 15
-          periodSeconds: 5
-          timeoutSeconds: 1   
+        # livenessProbe:
+        #   httpGet:
+        #     path: /api/values/health
+        #     port: 32090
+        #   initialDelaySeconds: 15
+        #   periodSeconds: 5
+        #   timeoutSeconds: 1   
       
