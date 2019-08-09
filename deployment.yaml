@@ -17,7 +17,7 @@ spec:
       - name: aliyun-secret 
       containers:
       - name: k8s-demo
-        image: registry.cn-hangzhou.aliyuncs.com/gww/k8s-demo:1.0.1
+        image: registry.cn-hangzhou.aliyuncs.com/gww/k8s-demo:1.0.2
         imagePullPolicy: IfNotPresent   
         resources:
           requests:

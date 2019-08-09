@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongo-pod
+spec:
+  volumes:
+    - name: mongo-pvc-storage
+      persistentVolumeClaim:
+       claimName: mongo-pvc
+  containers: 
+    - name: mongo-pvc-container
+      image: registry.cn-hangzhou.aliyuncs.com/marmot-mongo/mongo-3.6
+      volumeMounts:
+      - mountPath: /tmp/mongo
+        name: mongo-pvc-storage
